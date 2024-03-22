@@ -11,20 +11,20 @@ pushd $ROOT_PATH > /dev/null
 
 current_version=$(grep -o "spec.version.*=.*['\"]\([^'\"]*\)['\"]" SwiftSH.podspec | grep -o "[0-9]*\.[0-9]*\.[0-9]*")
 
-IFS='.' read -r major minor patch <<< "$current_version"
-new_minor=$((minor + 1))
-new_version="$major.$new_minor.$patch"
+IFS='.' read -r MAJOR MINOR PATCH <<< "$current_version"
+NEW_MINOR=$((MINOR + 1))
+NEW_VERSION="$MAJOR.$NEW_MINOR.$PATCH"
 
-TAG=$new_version
-echo "New TAG for release: $TAG"
-
-# TAG="0.1.1"
+TAG=$NEW_VERSION
 FRAMEWORK_ZIPNAME=SwiftSH-$TAG.framework.zip
 XCFRAMEWORK_ZIPNAME=SwiftSH-$TAG.xcframework.zip
+
+echo "New TAG for release: $TAG"
 
 zip --recurse-paths -X --quiet $FRAMEWORK_ZIPNAME SwiftSH.framework
 zip --recurse-paths -X --quiet $XCFRAMEWORK_ZIPNAME SwiftSH.xcframework
 
+sed -i "s/SwiftSH.binaries [0-9]*\.[0-9]*\.[0-9]* build/SwiftSH.binaries $TAG build/" script/release-note.md
 sed -i '' "s/spec.version[[:space:]]*=[[:space:]]*'[0-9]*\.[0-9]*\.[0-9]*'/spec.version = '$TAG'/" SwiftSH.podspec
 
 git add .
