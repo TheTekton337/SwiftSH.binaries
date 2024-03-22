@@ -9,7 +9,16 @@ set -e
 export ROOT_PATH=$(cd "$(dirname "$0")/.."; pwd -P)
 pushd $ROOT_PATH > /dev/null
 
-TAG="0.1.0"
+current_version=$(grep -o "spec.version.*=.*['\"]\([^'\"]*\)['\"]" SwiftSH.podspec | grep -o "[0-9]*\.[0-9]*\.[0-9]*")
+
+IFS='.' read -r major minor patch <<< "$current_version"
+new_minor=$((minor + 1))
+new_version="$major.$new_minor.$patch"
+
+TAG=$new_version
+echo "New TAG for release: $TAG"
+
+# TAG="0.1.1"
 FRAMEWORK_ZIPNAME=SwiftSH-$SPM_TAG.framework.zip
 XCFRAMEWORK_ZIPNAME=SwiftSH-$SPM_TAG.xcframework.zip
 
