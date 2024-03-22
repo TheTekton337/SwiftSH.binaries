@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'SwiftSH'
-  spec.version = '0.3.0'
+  spec.version = '0.2.0'
   spec.summary      = 'A Swift SSH framework that wraps libssh2, packaged as a binary for convenience.'
   spec.description  = <<-DESC
                        SwiftSH is a powerful library that enables SSH communication in Swift applications. This podspec is designed to integrate precompiled SwiftSH binaries for ease of use and rapid integration into iOS and macOS projects.
