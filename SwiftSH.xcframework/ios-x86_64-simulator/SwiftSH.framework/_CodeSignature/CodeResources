@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/SwiftSH-Swift.h</key>
 		<data>
-		RuUjlX9d1nTRUEAdWh6PM81bfAE=
+		45V4Rhwy8cN9f1om7mQ0Kxm/vQk=
 		</data>
 		<key>Headers/SwiftSH.h</key>
 		<data>
@@ -18,45 +18,37 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		99xmJDHly+C8b8D5xAsozF9LgkM=
+		3cPYVJoaiOgzl8oId8X56kThbT4=
+		</data>
+		<key>Modules/SwiftSH.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		Cp1p7/INIraL6fER0ADDKtc//6U=
+		</data>
+		<key>Modules/SwiftSH.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		dyQ5kuZ1speQZQiUr0MIkUvmX+8=
 		</data>
 		<key>Modules/SwiftSH.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		skOgnXcSBNXUC/Sm8rjHfSwFOyk=
+		L4oWGGc0ZeyIq9qopDU/Gy68p+s=
 		</data>
 		<key>Modules/SwiftSH.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		mTgFlpuIUg4SVayr40AGqOc40Bg=
+		dyQ5kuZ1speQZQiUr0MIkUvmX+8=
 		</data>
 		<key>Modules/SwiftSH.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		70tAz6SH+c3D4nRf++nj7JvwMMM=
-		</data>
-		<key>Modules/SwiftSH.swiftmodule/x86_64.swiftdoc</key>
-		<data>
-		skOgnXcSBNXUC/Sm8rjHfSwFOyk=
-		</data>
-		<key>Modules/SwiftSH.swiftmodule/x86_64.swiftinterface</key>
-		<data>
-		mTgFlpuIUg4SVayr40AGqOc40Bg=
-		</data>
-		<key>Modules/SwiftSH.swiftmodule/x86_64.swiftmodule</key>
-		<data>
-		70tAz6SH+c3D4nRf++nj7JvwMMM=
+		MDEyhSFbpibgtgZR8Nd9VTTSxOA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		pSC/vgxOb31ygEjFQBfyWfyEUyw=
+		8QZeXs4BDhcCtbWGNjIdFnsLHO0=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Headers/Libssh2.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			uw1p5h+9ZQbumINh7UqDGsLwwjc=
-			</data>
 			<key>hash2</key>
 			<data>
 			IrQ5qR/1f4vFl5aiQZFbAhc6Sce1CxZ44LHZoyrqPC0=
@@ -64,101 +56,58 @@
 		</dict>
 		<key>Headers/SwiftSH-Swift.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			RuUjlX9d1nTRUEAdWh6PM81bfAE=
-			</data>
 			<key>hash2</key>
 			<data>
-			mh1rkdCJ0TwOEZxD5/XuUfy2HVyVJ2Nao0mxETgfdHk=
+			izp5Wx2qkOQsSGSU9ZU0UunYyrkYq1Er38MXaobFRws=
 			</data>
 		</dict>
 		<key>Headers/SwiftSH.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			cCveJu1HUcsKT4wGIuXT5k/0nnc=
-			</data>
 			<key>hash2</key>
 			<data>
 			6aGTf/3CwhsQU3Lo1Tq8mUy9sYbd4WWyYWwlfDXzWv0=
 			</data>
 		</dict>
-		<key>Modules/SwiftSH.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<key>Modules/SwiftSH.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			skOgnXcSBNXUC/Sm8rjHfSwFOyk=
-			</data>
 			<key>hash2</key>
 			<data>
-			XFydglhfJFL8rk5tPpJNs8KvyGaVWjoLXYX5r5hOpjk=
+			2UjFhYzrG6u2MUbyACi5NNA1dqwDpsfBur+9Eo3i5NY=
+			</data>
+		</dict>
+		<key>Modules/SwiftSH.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			tIWeQDm9xlnkg+rgJEFZ5jR1q5gUk4I1VS5pVq1WxS8=
+			</data>
+		</dict>
+		<key>Modules/SwiftSH.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			y60UxP+BIiGn/m0wjElPXHDWctbzlCYXMNqyVCSnn8o=
 			</data>
 		</dict>
 		<key>Modules/SwiftSH.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			mTgFlpuIUg4SVayr40AGqOc40Bg=
-			</data>
 			<key>hash2</key>
 			<data>
-			WpwwM+X5qlt4tGbEkMWF03NBb/kVjjGBdypyfx0mhsI=
+			tIWeQDm9xlnkg+rgJEFZ5jR1q5gUk4I1VS5pVq1WxS8=
 			</data>
 		</dict>
 		<key>Modules/SwiftSH.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			70tAz6SH+c3D4nRf++nj7JvwMMM=
-			</data>
 			<key>hash2</key>
 			<data>
-			9voD8l0Y1qfEVpL7Z8X13KwYU7NEM8DYg9r1Q97flEc=
-			</data>
-		</dict>
-		<key>Modules/SwiftSH.swiftmodule/x86_64.swiftdoc</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			skOgnXcSBNXUC/Sm8rjHfSwFOyk=
-			</data>
-			<key>hash2</key>
-			<data>
-			XFydglhfJFL8rk5tPpJNs8KvyGaVWjoLXYX5r5hOpjk=
-			</data>
-		</dict>
-		<key>Modules/SwiftSH.swiftmodule/x86_64.swiftinterface</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			mTgFlpuIUg4SVayr40AGqOc40Bg=
-			</data>
-			<key>hash2</key>
-			<data>
-			WpwwM+X5qlt4tGbEkMWF03NBb/kVjjGBdypyfx0mhsI=
-			</data>
-		</dict>
-		<key>Modules/SwiftSH.swiftmodule/x86_64.swiftmodule</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			70tAz6SH+c3D4nRf++nj7JvwMMM=
-			</data>
-			<key>hash2</key>
-			<data>
-			9voD8l0Y1qfEVpL7Z8X13KwYU7NEM8DYg9r1Q97flEc=
+			r/KEaZSUM2WuPwBKoI/TFST5oIwryMFl/x+N9CvSe3g=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			pSC/vgxOb31ygEjFQBfyWfyEUyw=
-			</data>
 			<key>hash2</key>
 			<data>
-			AxQ5nj78DincEE+KXRgTDUA5d22ZZ7lrI4Rth1vwG6E=
+			nOFYBU5X84gM9pe1AgjA6g92zEf8SMOISL4Z7tnqARo=
 			</data>
 		</dict>
 	</dict>
