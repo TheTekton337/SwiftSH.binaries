@@ -1,4 +1,4 @@
-SwiftSH.binaries 0.2.0 build.
+SwiftSH.binaries 0.3.0 build.
 
 ### Supported platforms and architectures
 

@@ -24,7 +24,7 @@ echo "New TAG for release: $TAG"
 zip --recurse-paths -X --quiet $FRAMEWORK_ZIPNAME SwiftSH.framework
 zip --recurse-paths -X --quiet $XCFRAMEWORK_ZIPNAME SwiftSH.xcframework
 
-sed -i "s/SwiftSH.binaries [0-9]*\.[0-9]*\.[0-9]* build/SwiftSH.binaries $TAG build/" script/release-note.md
+sed -i '' "s/SwiftSH.binaries [0-9]*\.[0-9]*\.[0-9]* build/SwiftSH.binaries $TAG build/" script/release-note.md
 sed -i '' "s/spec.version[[:space:]]*=[[:space:]]*'[0-9]*\.[0-9]*\.[0-9]*'/spec.version = '$TAG'/" SwiftSH.podspec
 
 git add .
