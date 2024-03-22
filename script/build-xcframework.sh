@@ -19,8 +19,8 @@ TAG=$new_version
 echo "New TAG for release: $TAG"
 
 # TAG="0.1.1"
-FRAMEWORK_ZIPNAME=SwiftSH-$SPM_TAG.framework.zip
-XCFRAMEWORK_ZIPNAME=SwiftSH-$SPM_TAG.xcframework.zip
+FRAMEWORK_ZIPNAME=SwiftSH-$TAG.framework.zip
+XCFRAMEWORK_ZIPNAME=SwiftSH-$TAG.xcframework.zip
 
 zip --recurse-paths -X --quiet $FRAMEWORK_ZIPNAME SwiftSH.framework
 zip --recurse-paths -X --quiet $XCFRAMEWORK_ZIPNAME SwiftSH.xcframework
