@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.author       = { 'Tommaso Madonia' => 'tommaso@madonia.me' }
   spec.platforms    = { :ios => '13.0', :osx => '10.15' } # Adjust based on the platforms you support
   spec.swift_version = '5.3'
-  spec.source       = { :http => 'https://github.com/TheTekton337/SwiftSH.binaries/releases/download/#{spec.version}/SwiftSH.xcframework.zip' }
+  spec.source       = { :http => 'https://github.com/TheTekton337/SwiftSH.binaries/releases/download/#{spec.version}/SwiftSH-#{spec.version}.xcframework.zip' }
   spec.vendored_frameworks = 'SwiftSH.xcframework'
 
   spec.dependency 'CSSH', '~> 1.11.0'
