@@ -163,6 +163,7 @@ public struct Terminal : Swift.ExpressibleByStringLiteral, Swift.CustomStringCon
   public var session: SwiftSH.SSHSession {
     get
   }
+  public var onSessionClose: (() -> Swift.Void)?
   public func disconnect(_ completion: (() -> Swift.Void)?)
   @discardableResult
   public func setTerminalSize(width: Swift.UInt, height: Swift.UInt) -> Self

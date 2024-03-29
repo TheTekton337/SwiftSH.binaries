@@ -4919,6 +4919,149 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "onSessionClose",
+            "printedName": "onSessionClose",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SwiftSH10SSHChannelC14onSessionCloseyycSgvp",
+            "mangledName": "$s7SwiftSH10SSHChannelC14onSessionCloseyycSgvp",
+            "moduleName": "SwiftSH",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftSH10SSHChannelC14onSessionCloseyycSgvg",
+                "mangledName": "$s7SwiftSH10SSHChannelC14onSessionCloseyycSgvg",
+                "moduleName": "SwiftSH",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(() -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "() -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftSH10SSHChannelC14onSessionCloseyycSgvs",
+                "mangledName": "$s7SwiftSH10SSHChannelC14onSessionCloseyycSgvs",
+                "moduleName": "SwiftSH",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftSH10SSHChannelC14onSessionCloseyycSgvM",
+                "mangledName": "$s7SwiftSH10SSHChannelC14onSessionCloseyycSgvM",
+                "moduleName": "SwiftSH",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "disconnect",
             "printedName": "disconnect(_:)",
@@ -11987,21 +12130,21 @@
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Channel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1574,
+      "offset": 1620,
       "length": 2,
       "value": "22"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Channel.swift",
       "kind": "Array",
-      "offset": 1607,
+      "offset": 1653,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Channel.swift",
       "kind": "Array",
-      "offset": 1979,
+      "offset": 2025,
       "length": 2,
       "value": "[]"
     },
