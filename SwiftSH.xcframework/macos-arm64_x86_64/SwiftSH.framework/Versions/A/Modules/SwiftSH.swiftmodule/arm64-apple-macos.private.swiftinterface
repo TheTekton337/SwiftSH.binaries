@@ -90,15 +90,23 @@ public protocol SSHLibraryChannel {
   func setPseudoTerminalSize(_ terminal: SwiftSH.Terminal) throws
   func exec(_ command: Swift.String) throws
   func shell() throws
-  func read() throws -> Foundation.Data
+  func read(progress: SwiftSH.ReadProgressCallback?) throws -> Foundation.Data
   func readError() throws -> Foundation.Data
-  func write(_ data: Foundation.Data) -> (error: (any Swift.Error)?, bytesSent: Swift.Int)
+  func write(_ data: Foundation.Data, progress: SwiftSH.WriteProgressCallback?) -> (error: (any Swift.Error)?, bytesSent: Swift.Int)
   func exitStatus() -> Swift.Int?
   func sendEOF() throws
+  func openSCPChannel(remotePath path: Swift.String) throws -> SwiftSH.FileInfo
+  func openSCPChannel(localPath path: Swift.String, mode: Swift.Int32, fileSize: Swift.UInt64, mtime: Foundation.TimeInterval?, atime: Foundation.TimeInterval?) throws
 }
 public protocol SSHLibrarySFTP {
 }
 public protocol SSHLibrarySCP {
+  func sendInit(path: Swift.String, fileSize: Swift.UInt64) throws
+  func send(data: Foundation.Data) throws
+  func sendFinish() throws
+  func receiveInit(path: Swift.String) throws -> (fileSize: Swift.UInt64, permissions: Swift.UInt32)
+  func receive() throws -> Foundation.Data
+  func receiveFinish() throws
 }
 public enum FingerprintHashType : Swift.CustomStringConvertible {
   case md5, sha1, sha256
@@ -164,6 +172,9 @@ public struct Terminal : Swift.ExpressibleByStringLiteral, Swift.CustomStringCon
     get
   }
   public var onSessionClose: (() -> Swift.Void)?
+  public var sharedSession: SwiftSH.SSHSession {
+    get
+  }
   public func disconnect(_ completion: (() -> Swift.Void)?)
   @discardableResult
   public func setTerminalSize(width: Swift.UInt, height: Swift.UInt) -> Self
@@ -175,7 +186,11 @@ public class SFTPSession {
   @objc deinit
 }
 public typealias SSHCompletionBlock = ((any Swift.Error)?) -> Swift.Void
-open class SSHSession {
+public typealias ReadProgressCallback = (_ bytesTransferred: Swift.UInt64) -> Swift.Void
+public typealias WriteProgressCallback = (_ bytesTransferred: Swift.UInt64, _ totalBytes: Swift.UInt64) -> Swift.Void
+public typealias SCPReadCompletionBlock = (SwiftSH.FileInfo?, Foundation.Data?, (any Swift.Error)?) -> Swift.Void
+public typealias SCPWriteCompletionBlock = (Swift.Int?, (any Swift.Error)?) -> Swift.Void
+@objc open class SSHSession : ObjectiveC.NSObject {
   public var session: any SwiftSH.SSHLibrarySession
   final public let host: Swift.String
   final public let port: Swift.UInt16
@@ -226,16 +241,27 @@ open class SSHSession {
   public func connect() -> Self
   public func authenticate(_ challenge: SwiftSH.AuthenticationChallenge?) -> Self
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(*, unavailable)
-public class SCPSession : SwiftSH.SSHChannel {
+@objc @_hasMissingDesignatedInitializers @objcMembers public class FileInfo : ObjectiveC.NSObject {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class SCPSession : SwiftSH.SSHChannel {
+  public init(sshLibrary: any SwiftSH.SSHLibrary.Type = Libssh2.self, session: SwiftSH.SSHSession, environment: [SwiftSH.Environment] = [], terminal: SwiftSH.Terminal? = nil) throws
+  public init(sshLibrary: any SwiftSH.SSHLibrary.Type = Libssh2.self, session: SwiftSH.SSHSession) throws
   @discardableResult
   public func download(_ from: Swift.String, to path: Swift.String) -> Self
-  public func download(_ from: Swift.String, to path: Swift.String, completion: SwiftSH.SSHCompletionBlock?)
+  public func download(_ from: Swift.String, to path: Swift.String, completion: SwiftSH.SCPReadCompletionBlock?, progress: SwiftSH.ReadProgressCallback?)
   @discardableResult
   public func download(_ from: Swift.String, to stream: Foundation.OutputStream) -> Self
-  public func download(_ from: Swift.String, to stream: Foundation.OutputStream, completion: SwiftSH.SSHCompletionBlock?)
-  public func download(_ from: Swift.String, completion: @escaping ((Foundation.Data?, (any Swift.Error)?) -> Swift.Void))
+  public func download(_ from: Swift.String, to stream: Foundation.OutputStream, completion: SwiftSH.SCPReadCompletionBlock?, progress: SwiftSH.ReadProgressCallback?)
+  public func download(_ from: Swift.String, completion: @escaping SwiftSH.SCPReadCompletionBlock, progress: @escaping SwiftSH.ReadProgressCallback)
+  @discardableResult
+  public func upload(_ localPath: Swift.String) -> Self
+  public func upload(_ localPath: Swift.String, completion: SwiftSH.SCPWriteCompletionBlock?, progress: SwiftSH.WriteProgressCallback?)
   @objc deinit
+}
+extension SwiftSH.SCPSession {
+  public func openSCPChannelForUpload(localPath: Swift.String, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
+  public func openSCPChannelForDownload(remotePath: Swift.String, completion: @escaping (SwiftSH.FileInfo?, (any Swift.Error)?) -> Swift.Void)
 }
 public protocol Logger {
   var enabled: Swift.Bool { get set }

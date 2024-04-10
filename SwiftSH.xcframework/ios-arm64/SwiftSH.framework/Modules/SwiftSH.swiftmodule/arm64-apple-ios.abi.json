@@ -130,7 +130,7 @@
                 "kind": "TypeNominal",
                 "name": "SSHSession",
                 "printedName": "SwiftSH.SSHSession",
-                "usr": "s:7SwiftSH10SSHSessionC"
+                "usr": "c:@M@SwiftSH@objc(cs)SSHSession"
               },
               {
                 "kind": "TypeNominal",
@@ -2742,18 +2742,44 @@
           {
             "kind": "Function",
             "name": "read",
-            "printedName": "read()",
+            "printedName": "read(progress:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Data",
                 "printedName": "Foundation.Data",
                 "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.UInt64) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.UInt64) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt64",
+                        "printedName": "Swift.UInt64",
+                        "usr": "s:s6UInt64V"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:7SwiftSH17SSHLibraryChannelP4read10Foundation4DataVyKF",
-            "mangledName": "$s7SwiftSH17SSHLibraryChannelP4read10Foundation4DataVyKF",
+            "usr": "s:7SwiftSH17SSHLibraryChannelP4read8progress10Foundation4DataVys6UInt64VcSg_tKF",
+            "mangledName": "$s7SwiftSH17SSHLibraryChannelP4read8progress10Foundation4DataVys6UInt64VcSg_tKF",
             "moduleName": "SwiftSH",
             "genericSig": "<τ_0_0 where τ_0_0 : SwiftSH.SSHLibraryChannel>",
             "sugared_genericSig": "<Self where Self : SwiftSH.SSHLibraryChannel>",
@@ -2788,7 +2814,7 @@
           {
             "kind": "Function",
             "name": "write",
-            "printedName": "write(_:)",
+            "printedName": "write(_:progress:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2822,11 +2848,50 @@
                 "name": "Data",
                 "printedName": "Foundation.Data",
                 "usr": "s:10Foundation4DataV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.UInt64, Swift.UInt64) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.UInt64, Swift.UInt64) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.UInt64, Swift.UInt64)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UInt64",
+                            "printedName": "Swift.UInt64",
+                            "usr": "s:s6UInt64V"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UInt64",
+                            "printedName": "Swift.UInt64",
+                            "usr": "s:s6UInt64V"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:7SwiftSH17SSHLibraryChannelP5writeys5Error_pSg5error_Si9bytesSentt10Foundation4DataVF",
-            "mangledName": "$s7SwiftSH17SSHLibraryChannelP5writeys5Error_pSg5error_Si9bytesSentt10Foundation4DataVF",
+            "usr": "s:7SwiftSH17SSHLibraryChannelP5write_8progresss5Error_pSg5error_Si9bytesSentt10Foundation4DataV_ys6UInt64V_ANtcSgtF",
+            "mangledName": "$s7SwiftSH17SSHLibraryChannelP5write_8progresss5Error_pSg5error_Si9bytesSentt10Foundation4DataV_ys6UInt64V_ANtcSgtF",
             "moduleName": "SwiftSH",
             "genericSig": "<τ_0_0 where τ_0_0 : SwiftSH.SSHLibraryChannel>",
             "sugared_genericSig": "<Self where Self : SwiftSH.SSHLibraryChannel>",
@@ -2885,6 +2950,103 @@
             "throwing": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "openSCPChannel",
+            "printedName": "openSCPChannel(remotePath:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FileInfo",
+                "printedName": "SwiftSH.FileInfo",
+                "usr": "c:@M@SwiftSH@objc(cs)FileInfo"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH17SSHLibraryChannelP14openSCPChannel10remotePathAA8FileInfoCSS_tKF",
+            "mangledName": "$s7SwiftSH17SSHLibraryChannelP14openSCPChannel10remotePathAA8FileInfoCSS_tKF",
+            "moduleName": "SwiftSH",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftSH.SSHLibraryChannel>",
+            "sugared_genericSig": "<Self where Self : SwiftSH.SSHLibraryChannel>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "openSCPChannel",
+            "printedName": "openSCPChannel(localPath:mode:fileSize:mtime:atime:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt64",
+                "printedName": "Swift.UInt64",
+                "usr": "s:s6UInt64V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH17SSHLibraryChannelP14openSCPChannel9localPath4mode8fileSize5mtime5atimeySS_s5Int32Vs6UInt64VSdSgANtKF",
+            "mangledName": "$s7SwiftSH17SSHLibraryChannelP14openSCPChannel9localPath4mode8fileSize5mtime5atimeySS_s5Int32Vs6UInt64VSdSgANtKF",
+            "moduleName": "SwiftSH",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftSH.SSHLibraryChannel>",
+            "sugared_genericSig": "<Self where Self : SwiftSH.SSHLibraryChannel>",
+            "protocolReq": true,
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -2913,6 +3075,197 @@
         "kind": "TypeDecl",
         "name": "SSHLibrarySCP",
         "printedName": "SSHLibrarySCP",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "sendInit",
+            "printedName": "sendInit(path:fileSize:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt64",
+                "printedName": "Swift.UInt64",
+                "usr": "s:s6UInt64V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH13SSHLibrarySCPP8sendInit4path8fileSizeySS_s6UInt64VtKF",
+            "mangledName": "$s7SwiftSH13SSHLibrarySCPP8sendInit4path8fileSizeySS_s6UInt64VtKF",
+            "moduleName": "SwiftSH",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftSH.SSHLibrarySCP>",
+            "sugared_genericSig": "<Self where Self : SwiftSH.SSHLibrarySCP>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH13SSHLibrarySCPP4send4datay10Foundation4DataV_tKF",
+            "mangledName": "$s7SwiftSH13SSHLibrarySCPP4send4datay10Foundation4DataV_tKF",
+            "moduleName": "SwiftSH",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftSH.SSHLibrarySCP>",
+            "sugared_genericSig": "<Self where Self : SwiftSH.SSHLibrarySCP>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "sendFinish",
+            "printedName": "sendFinish()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH13SSHLibrarySCPP10sendFinishyyKF",
+            "mangledName": "$s7SwiftSH13SSHLibrarySCPP10sendFinishyyKF",
+            "moduleName": "SwiftSH",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftSH.SSHLibrarySCP>",
+            "sugared_genericSig": "<Self where Self : SwiftSH.SSHLibrarySCP>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "receiveInit",
+            "printedName": "receiveInit(path:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(fileSize: Swift.UInt64, permissions: Swift.UInt32)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt64",
+                    "printedName": "Swift.UInt64",
+                    "usr": "s:s6UInt64V"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt32",
+                    "printedName": "Swift.UInt32",
+                    "usr": "s:s6UInt32V"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH13SSHLibrarySCPP11receiveInit4paths6UInt64V8fileSize_s6UInt32V11permissionstSS_tKF",
+            "mangledName": "$s7SwiftSH13SSHLibrarySCPP11receiveInit4paths6UInt64V8fileSize_s6UInt32V11permissionstSS_tKF",
+            "moduleName": "SwiftSH",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftSH.SSHLibrarySCP>",
+            "sugared_genericSig": "<Self where Self : SwiftSH.SSHLibrarySCP>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "receive",
+            "printedName": "receive()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Data",
+                "printedName": "Foundation.Data",
+                "usr": "s:10Foundation4DataV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH13SSHLibrarySCPP7receive10Foundation4DataVyKF",
+            "mangledName": "$s7SwiftSH13SSHLibrarySCPP7receive10Foundation4DataVyKF",
+            "moduleName": "SwiftSH",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftSH.SSHLibrarySCP>",
+            "sugared_genericSig": "<Self where Self : SwiftSH.SSHLibrarySCP>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "receiveFinish",
+            "printedName": "receiveFinish()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH13SSHLibrarySCPP13receiveFinishyyKF",
+            "mangledName": "$s7SwiftSH13SSHLibrarySCPP13receiveFinishyyKF",
+            "moduleName": "SwiftSH",
+            "genericSig": "<τ_0_0 where τ_0_0 : SwiftSH.SSHLibrarySCP>",
+            "sugared_genericSig": "<Self where Self : SwiftSH.SSHLibrarySCP>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
         "declKind": "Protocol",
         "usr": "s:7SwiftSH13SSHLibrarySCPP",
         "mangledName": "$s7SwiftSH13SSHLibrarySCPP",
@@ -4883,7 +5236,7 @@
                 "kind": "TypeNominal",
                 "name": "SSHSession",
                 "printedName": "SwiftSH.SSHSession",
-                "usr": "s:7SwiftSH10SSHSessionC"
+                "usr": "c:@M@SwiftSH@objc(cs)SSHSession"
               }
             ],
             "declKind": "Var",
@@ -4906,7 +5259,7 @@
                     "kind": "TypeNominal",
                     "name": "SSHSession",
                     "printedName": "SwiftSH.SSHSession",
-                    "usr": "s:7SwiftSH10SSHSessionC"
+                    "usr": "c:@M@SwiftSH@objc(cs)SSHSession"
                   }
                 ],
                 "declKind": "Accessor",
@@ -4956,7 +5309,8 @@
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "hasStorage": true,
             "accessors": [
@@ -5058,6 +5412,46 @@
                 "moduleName": "SwiftSH",
                 "implicit": true,
                 "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "sharedSession",
+            "printedName": "sharedSession",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SSHSession",
+                "printedName": "SwiftSH.SSHSession",
+                "usr": "c:@M@SwiftSH@objc(cs)SSHSession"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7SwiftSH10SSHChannelC13sharedSessionAA10SSHSessionCvp",
+            "mangledName": "$s7SwiftSH10SSHChannelC13sharedSessionAA10SSHSessionCvp",
+            "moduleName": "SwiftSH",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SSHSession",
+                    "printedName": "SwiftSH.SSHSession",
+                    "usr": "c:@M@SwiftSH@objc(cs)SSHSession"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7SwiftSH10SSHChannelC13sharedSessionAA10SSHSessionCvg",
+                "mangledName": "$s7SwiftSH10SSHChannelC13sharedSessionAA10SSHSessionCvg",
+                "moduleName": "SwiftSH",
+                "accessorKind": "get"
               }
             ]
           },
@@ -5227,6 +5621,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftSH"
       },
       {
         "kind": "Import",
@@ -5562,7 +5963,7 @@
                 "kind": "TypeNominal",
                 "name": "SSHSession",
                 "printedName": "SwiftSH.SSHSession",
-                "usr": "s:7SwiftSH10SSHSessionC"
+                "usr": "c:@M@SwiftSH@objc(cs)SSHSession"
               },
               {
                 "kind": "TypeNominal",
@@ -6391,15 +6792,97 @@
               "DiscardableResult"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SSHSession",
+                "printedName": "SwiftSH.SSHSession",
+                "usr": "c:@M@SwiftSH@objc(cs)SSHSession"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SwiftSH@objc(cs)SSHSession(im)init",
+            "mangledName": "$s7SwiftSH10SSHSessionCACycfc",
+            "moduleName": "SwiftSH",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
           }
         ],
         "declKind": "Class",
-        "usr": "s:7SwiftSH10SSHSessionC",
+        "usr": "c:@M@SwiftSH@objc(cs)SSHSession",
         "mangledName": "$s7SwiftSH10SSHSessionC",
         "moduleName": "SwiftSH",
         "isOpen": true,
         "declAttributes": [
-          "AccessControl"
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
         ]
       },
       {
@@ -6528,7 +7011,7 @@
                 "kind": "TypeNominal",
                 "name": "SSHSession",
                 "printedName": "SwiftSH.SSHSession",
-                "usr": "s:7SwiftSH10SSHSessionC"
+                "usr": "c:@M@SwiftSH@objc(cs)SSHSession"
               },
               {
                 "kind": "TypeNominal",
@@ -6845,6 +7328,973 @@
         "moduleName": "SwiftSH",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FileInfo",
+        "printedName": "FileInfo",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "FileInfo",
+                "printedName": "SwiftSH.FileInfo",
+                "usr": "c:@M@SwiftSH@objc(cs)FileInfo"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SwiftSH@objc(cs)FileInfo(im)init",
+            "mangledName": "$s7SwiftSH8FileInfoCACycfc",
+            "moduleName": "SwiftSH",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SwiftSH@objc(cs)FileInfo",
+        "mangledName": "$s7SwiftSH8FileInfoC",
+        "moduleName": "SwiftSH",
+        "declAttributes": [
+          "AccessControl",
+          "ObjCMembers",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftSH",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CSSH",
+        "printedName": "CSSH",
+        "declKind": "Import",
+        "moduleName": "SwiftSH",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CSwiftSH",
+        "printedName": "CSwiftSH",
+        "declKind": "Import",
+        "moduleName": "SwiftSH"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SCPSession",
+        "printedName": "SCPSession",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(sshLibrary:session:environment:terminal:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SCPSession",
+                "printedName": "SwiftSH.SCPSession",
+                "usr": "s:7SwiftSH10SCPSessionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ExistentialMetatype",
+                "printedName": "any SwiftSH.SSHLibrary.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SSHLibrary",
+                    "printedName": "SwiftSH.SSHLibrary",
+                    "usr": "s:7SwiftSH10SSHLibraryP"
+                  }
+                ],
+                "hasDefaultArg": true
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SSHSession",
+                "printedName": "SwiftSH.SSHSession",
+                "usr": "c:@M@SwiftSH@objc(cs)SSHSession"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[SwiftSH.Environment]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Environment",
+                    "printedName": "SwiftSH.Environment",
+                    "usr": "s:7SwiftSH11EnvironmentV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SwiftSH.Terminal?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Terminal",
+                    "printedName": "SwiftSH.Terminal",
+                    "usr": "s:7SwiftSH8TerminalV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7SwiftSH10SCPSessionC10sshLibrary7session11environment8terminalAcA10SSHLibrary_pXp_AA10SSHSessionCSayAA11EnvironmentVGAA8TerminalVSgtKcfc",
+            "mangledName": "$s7SwiftSH10SCPSessionC10sshLibrary7session11environment8terminalAcA10SSHLibrary_pXp_AA10SSHSessionCSayAA11EnvironmentVGAA8TerminalVSgtKcfc",
+            "moduleName": "SwiftSH",
+            "overriding": true,
+            "declAttributes": [
+              "Override",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(sshLibrary:session:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SCPSession",
+                "printedName": "SwiftSH.SCPSession",
+                "usr": "s:7SwiftSH10SCPSessionC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ExistentialMetatype",
+                "printedName": "any SwiftSH.SSHLibrary.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SSHLibrary",
+                    "printedName": "SwiftSH.SSHLibrary",
+                    "usr": "s:7SwiftSH10SSHLibraryP"
+                  }
+                ],
+                "hasDefaultArg": true
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SSHSession",
+                "printedName": "SwiftSH.SSHSession",
+                "usr": "c:@M@SwiftSH@objc(cs)SSHSession"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7SwiftSH10SCPSessionC10sshLibrary7sessionAcA10SSHLibrary_pXp_AA10SSHSessionCtKcfc",
+            "mangledName": "$s7SwiftSH10SCPSessionC10sshLibrary7sessionAcA10SSHLibrary_pXp_AA10SSHSessionCtKcfc",
+            "moduleName": "SwiftSH",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "download",
+            "printedName": "download(_:to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicSelf",
+                "printedName": "Self"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH10SCPSessionC8download_2toACXDSS_SStF",
+            "mangledName": "$s7SwiftSH10SCPSessionC8download_2toACXDSS_SStF",
+            "moduleName": "SwiftSH",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "download",
+            "printedName": "download(_:to:completion:progress:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((SwiftSH.FileInfo?, Foundation.Data?, (any Swift.Error)?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SwiftSH.FileInfo?, Foundation.Data?, (any Swift.Error)?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(SwiftSH.FileInfo?, Foundation.Data?, (any Swift.Error)?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "SwiftSH.FileInfo?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "FileInfo",
+                                "printedName": "SwiftSH.FileInfo",
+                                "usr": "c:@M@SwiftSH@objc(cs)FileInfo"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Foundation.Data?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Data",
+                                "printedName": "Foundation.Data",
+                                "usr": "s:10Foundation4DataV"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "(any Swift.Error)?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "any Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.UInt64) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.UInt64) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt64",
+                        "printedName": "Swift.UInt64",
+                        "usr": "s:s6UInt64V"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH10SCPSessionC8download_2to10completion8progressySS_SSyAA8FileInfoCSg_10Foundation4DataVSgs5Error_pSgtcSgys6UInt64VcSgtF",
+            "mangledName": "$s7SwiftSH10SCPSessionC8download_2to10completion8progressySS_SSyAA8FileInfoCSg_10Foundation4DataVSgs5Error_pSgtcSgys6UInt64VcSgtF",
+            "moduleName": "SwiftSH",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "download",
+            "printedName": "download(_:to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicSelf",
+                "printedName": "Self"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OutputStream",
+                "printedName": "Foundation.OutputStream",
+                "usr": "c:objc(cs)NSOutputStream"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH10SCPSessionC8download_2toACXDSS_So14NSOutputStreamCtF",
+            "mangledName": "$s7SwiftSH10SCPSessionC8download_2toACXDSS_So14NSOutputStreamCtF",
+            "moduleName": "SwiftSH",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "download",
+            "printedName": "download(_:to:completion:progress:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "OutputStream",
+                "printedName": "Foundation.OutputStream",
+                "usr": "c:objc(cs)NSOutputStream"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((SwiftSH.FileInfo?, Foundation.Data?, (any Swift.Error)?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SwiftSH.FileInfo?, Foundation.Data?, (any Swift.Error)?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(SwiftSH.FileInfo?, Foundation.Data?, (any Swift.Error)?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "SwiftSH.FileInfo?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "FileInfo",
+                                "printedName": "SwiftSH.FileInfo",
+                                "usr": "c:@M@SwiftSH@objc(cs)FileInfo"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Foundation.Data?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Data",
+                                "printedName": "Foundation.Data",
+                                "usr": "s:10Foundation4DataV"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "(any Swift.Error)?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "any Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.UInt64) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.UInt64) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UInt64",
+                        "printedName": "Swift.UInt64",
+                        "usr": "s:s6UInt64V"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH10SCPSessionC8download_2to10completion8progressySS_So14NSOutputStreamCyAA8FileInfoCSg_10Foundation4DataVSgs5Error_pSgtcSgys6UInt64VcSgtF",
+            "mangledName": "$s7SwiftSH10SCPSessionC8download_2to10completion8progressySS_So14NSOutputStreamCyAA8FileInfoCSg_10Foundation4DataVSgs5Error_pSgtcSgys6UInt64VcSgtF",
+            "moduleName": "SwiftSH",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "download",
+            "printedName": "download(_:completion:progress:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftSH.FileInfo?, Foundation.Data?, (any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(SwiftSH.FileInfo?, Foundation.Data?, (any Swift.Error)?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "SwiftSH.FileInfo?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "FileInfo",
+                            "printedName": "SwiftSH.FileInfo",
+                            "usr": "c:@M@SwiftSH@objc(cs)FileInfo"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Foundation.Data?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Data",
+                            "printedName": "Foundation.Data",
+                            "usr": "s:10Foundation4DataV"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "(any Swift.Error)?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.UInt64) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt64",
+                    "printedName": "Swift.UInt64",
+                    "usr": "s:s6UInt64V"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH10SCPSessionC8download_10completion8progressySS_yAA8FileInfoCSg_10Foundation4DataVSgs5Error_pSgtcys6UInt64VctF",
+            "mangledName": "$s7SwiftSH10SCPSessionC8download_10completion8progressySS_yAA8FileInfoCSg_10Foundation4DataVSgs5Error_pSgtcys6UInt64VctF",
+            "moduleName": "SwiftSH",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DynamicSelf",
+                "printedName": "Self"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH10SCPSessionC6uploadyACXDSSF",
+            "mangledName": "$s7SwiftSH10SCPSessionC6uploadyACXDSSF",
+            "moduleName": "SwiftSH",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "upload",
+            "printedName": "upload(_:completion:progress:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Int?, (any Swift.Error)?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int?, (any Swift.Error)?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.Int?, (any Swift.Error)?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "Swift.Int?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Int",
+                                "printedName": "Swift.Int",
+                                "usr": "s:Si"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "(any Swift.Error)?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Error",
+                                "printedName": "any Swift.Error",
+                                "usr": "s:s5ErrorP"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.UInt64, Swift.UInt64) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.UInt64, Swift.UInt64) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.UInt64, Swift.UInt64)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UInt64",
+                            "printedName": "Swift.UInt64",
+                            "usr": "s:s6UInt64V"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UInt64",
+                            "printedName": "Swift.UInt64",
+                            "usr": "s:s6UInt64V"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH10SCPSessionC6upload_10completion8progressySS_ySiSg_s5Error_pSgtcSgys6UInt64V_ALtcSgtF",
+            "mangledName": "$s7SwiftSH10SCPSessionC6upload_10completion8progressySS_ySiSg_s5Error_pSgtcSgys6UInt64V_ALtcSgtF",
+            "moduleName": "SwiftSH",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "openSCPChannelForUpload",
+            "printedName": "openSCPChannelForUpload(localPath:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "((any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any Swift.Error)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH10SCPSessionC23openSCPChannelForUpload9localPath10completionySS_ys5Error_pSgctF",
+            "mangledName": "$s7SwiftSH10SCPSessionC23openSCPChannelForUpload9localPath10completionySS_ys5Error_pSgctF",
+            "moduleName": "SwiftSH",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "openSCPChannelForDownload",
+            "printedName": "openSCPChannelForDownload(remotePath:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftSH.FileInfo?, (any Swift.Error)?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(SwiftSH.FileInfo?, (any Swift.Error)?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "SwiftSH.FileInfo?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "FileInfo",
+                            "printedName": "SwiftSH.FileInfo",
+                            "usr": "c:@M@SwiftSH@objc(cs)FileInfo"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "(any Swift.Error)?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "any Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7SwiftSH10SCPSessionC25openSCPChannelForDownload10remotePath10completionySS_yAA8FileInfoCSg_s5Error_pSgtctF",
+            "mangledName": "$s7SwiftSH10SCPSessionC25openSCPChannelForDownload10remotePath10completionySS_yAA8FileInfoCSg_s5Error_pSgtctF",
+            "moduleName": "SwiftSH",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:7SwiftSH10SCPSessionC",
+        "mangledName": "$s7SwiftSH10SCPSessionC",
+        "moduleName": "SwiftSH",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "superclassUsr": "s:7SwiftSH10SSHChannelC",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "SwiftSH.SSHChannel"
         ]
       },
       {
@@ -12053,14 +13503,14 @@
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/SSHLibrary.swift",
       "kind": "IntegerLiteral",
-      "offset": 7261,
+      "offset": 9291,
       "length": 2,
       "value": "80"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/SSHLibrary.swift",
       "kind": "IntegerLiteral",
-      "offset": 7280,
+      "offset": 9310,
       "length": 2,
       "value": "24"
     },
@@ -12123,51 +13573,58 @@
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Libssh2.swift",
       "kind": "IntegerLiteral",
-      "offset": 24058,
+      "offset": 24406,
       "length": 6,
       "value": "32768"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Channel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1620,
+      "offset": 1864,
       "length": 2,
       "value": "22"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Channel.swift",
       "kind": "Array",
-      "offset": 1653,
+      "offset": 1897,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Channel.swift",
       "kind": "Array",
-      "offset": 2025,
+      "offset": 2269,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Session.swift",
       "kind": "IntegerLiteral",
-      "offset": 1881,
+      "offset": 2217,
       "length": 2,
       "value": "22"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Session.swift",
       "kind": "BooleanLiteral",
-      "offset": 2791,
+      "offset": 3166,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Session.swift",
       "kind": "Dictionary",
-      "offset": 3039,
+      "offset": 3414,
       "length": 3,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Session.swift",
+      "kind": "StringLiteral",
+      "offset": 1559,
+      "length": 10,
+      "value": "\"SwiftSH.SSHSession\""
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Command.swift",
@@ -12191,6 +13648,97 @@
       "value": "[]"
     },
     {
+      "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/FileInfo.swift",
+      "kind": "StringLiteral",
+      "offset": 175,
+      "length": 8,
+      "value": "\"SwiftSH.FileInfo\""
+    },
+    {
+      "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/SCP.swift",
+      "kind": "StringLiteral",
+      "offset": 1309,
+      "length": 16,
+      "value": "\"SCPErrorDomain\""
+    },
+    {
+      "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/SCP.swift",
+      "kind": "StringLiteral",
+      "offset": 1361,
+      "length": 19,
+      "value": "\"UploadErrorDomain\""
+    },
+    {
+      "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/SCP.swift",
+      "kind": "StringLiteral",
+      "offset": 1412,
+      "length": 23,
+      "value": "\"File is not readable.\""
+    },
+    {
+      "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/SCP.swift",
+      "kind": "StringLiteral",
+      "offset": 1470,
+      "length": 15,
+      "value": "\"Invalid path.\""
+    },
+    {
+      "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/SCP.swift",
+      "kind": "StringLiteral",
+      "offset": 1533,
+      "length": 29,
+      "value": "\"Upload verification failed.\""
+    },
+    {
+      "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/SCP.swift",
+      "kind": "StringLiteral",
+      "offset": 1597,
+      "length": 18,
+      "value": "\"FileInfo is nil.\""
+    },
+    {
+      "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/SCP.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1679,
+      "length": 4,
+      "value": "1001"
+    },
+    {
+      "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/SCP.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1722,
+      "length": 3,
+      "value": "101"
+    },
+    {
+      "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/SCP.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1765,
+      "length": 3,
+      "value": "102"
+    },
+    {
+      "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/SCP.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1811,
+      "length": 3,
+      "value": "103"
+    },
+    {
+      "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/SCP.swift",
+      "kind": "Array",
+      "offset": 2100,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/SCP.swift",
+      "kind": "StringLiteral",
+      "offset": 1860,
+      "length": 10,
+      "value": "\"SwiftSH.SCPSession\""
+    },
+    {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/DNS.swift",
       "kind": "BooleanLiteral",
       "offset": 1363,
@@ -12207,315 +13755,315 @@
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3641,
+      "offset": 3699,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3668,
+      "offset": 3726,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3699,
+      "offset": 3757,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3721,
+      "offset": 3779,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3743,
+      "offset": 3801,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3773,
+      "offset": 3831,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3806,
+      "offset": 3864,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3847,
+      "offset": 3905,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3881,
+      "offset": 3939,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3909,
+      "offset": 3967,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3937,
+      "offset": 3995,
       "length": 2,
       "value": "11"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3970,
+      "offset": 4028,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 4014,
+      "offset": 4072,
       "length": 2,
       "value": "13"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 4065,
+      "offset": 4123,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 4095,
+      "offset": 4153,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3641,
+      "offset": 3699,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3668,
+      "offset": 3726,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3699,
+      "offset": 3757,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3721,
+      "offset": 3779,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3743,
+      "offset": 3801,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3773,
+      "offset": 3831,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3806,
+      "offset": 3864,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3847,
+      "offset": 3905,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3881,
+      "offset": 3939,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3909,
+      "offset": 3967,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3937,
+      "offset": 3995,
       "length": 2,
       "value": "11"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3970,
+      "offset": 4028,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 4014,
+      "offset": 4072,
       "length": 2,
       "value": "13"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 4065,
+      "offset": 4123,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 4095,
+      "offset": 4153,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3641,
+      "offset": 3699,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3668,
+      "offset": 3726,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3699,
+      "offset": 3757,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3721,
+      "offset": 3779,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3743,
+      "offset": 3801,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3773,
+      "offset": 3831,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3806,
+      "offset": 3864,
       "length": 1,
       "value": "7"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3847,
+      "offset": 3905,
       "length": 1,
       "value": "8"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3881,
+      "offset": 3939,
       "length": 1,
       "value": "9"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3909,
+      "offset": 3967,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3937,
+      "offset": 3995,
       "length": 2,
       "value": "11"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 3970,
+      "offset": 4028,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 4014,
+      "offset": 4072,
       "length": 2,
       "value": "13"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 4065,
+      "offset": 4123,
       "length": 2,
       "value": "14"
     },
     {
       "filePath": "\/Users\/tjtekton\/code\/TheTekton337\/SwiftSH\/Sources\/SwiftSH\/Error.swift",
       "kind": "IntegerLiteral",
-      "offset": 4095,
+      "offset": 4153,
       "length": 2,
       "value": "15"
     }
